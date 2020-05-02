@@ -1,7 +1,9 @@
 package covidjpa.dao;
 
-import javax.persistence.EntityManager;
+import java.util.ArrayList;
 
+import javax.persistence.EntityManager;
+import java.util.List;
 import covidjpa.entities.Mensaje;
 import covidjpa.util.Conexion;
 
@@ -12,6 +14,13 @@ public class MensajeDao {
 	public MensajeDao(){
 		this.em=Conexion.getEm();		
 	}
+	
+	
+	
+	public List<Mensaje> listar (){		
+		return  (List<Mensaje>) em.createQuery("select m from Mensaje m").getResultList();
+	}
+
 	
 	public void insertar (Mensaje mensaje){
 		try {

@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="mensaje")
 public class Mensaje implements Serializable{
 
 	/**
@@ -22,7 +24,9 @@ public class Mensaje implements Serializable{
 	
 	@Column(name="nombre")
     private String name;
+	@Column(name="email")
     private String email;
+	@Column(name="website")
     private String website;
     @Column(name="mensaje")
     private String message;    

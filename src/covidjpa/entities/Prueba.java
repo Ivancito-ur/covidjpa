@@ -12,7 +12,7 @@ public class Prueba {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Mensaje m = new Mensaje();
-		m.setName("Hola");
+		m.setName("Prueba");
 		m.setEmail("q@gmail.com");
 		m.setWebsite("WWW.ho.ac");
 		m.setMessage("222222222");

@@ -14,6 +14,7 @@ public class Conexion {
 	
 	public static EntityManager getEm(){
 		if(em==null){
+		
 			EntityManagerFactory emf =  Persistence.createEntityManagerFactory("covidjpa");
 			em = emf.createEntityManager();
 		}
